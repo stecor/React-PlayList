@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './css/todoitem.css';
 
 class TodoItem extends Component {
 
@@ -7,13 +7,13 @@ class TodoItem extends Component {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
   }
-  
+
   render(){
     return (
       <li >
         <div className="todo-item">
-          <span className="item-name" ref="thisItem">{this.props.item}</span>
-          <span className="item-delete" onClick={this.handleDelete}> x </span>
+          <span className="item-name" >{this.props.item}</span>
+          <span className="item-remove" onClick={this.handleDelete}> x </span>
         </div>
       </li>
     );

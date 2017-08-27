@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import TodoItem from './todoitem'
+import TodoItem from './todoitem';
+import './css/todo.css';
 
 class Todo extends Component {
 
@@ -19,7 +20,7 @@ class Todo extends Component {
       }.bind(this));
 
     return (
-      <div className="todo-list">
+      <div id="todo-list">
         <p>The busiest people have the most leisure...</p>
         <ul>{todos}</ul>
       </div>
