@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TodoItem from './TodoItem'
+import TodoItem from './todoitem'
 
-class TodoComponent extends Component {
+class Todo extends Component {
 
   constructor(props){
     super(props);
@@ -38,4 +38,4 @@ class TodoComponent extends Component {
 
 }
 
-export default TodoComponent;
+export default Todo;
