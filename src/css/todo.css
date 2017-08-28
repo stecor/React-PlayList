@@ -25,3 +25,19 @@ body{
   list-style-type: none;
   padding: 0;
 }
+
+.nav{
+  display:flex;
+}
+
+.nav li{
+  margin-right: 15px;
+}
+
+.active{
+  font-weight: bold;
+}
+
+.container ul{
+    list-style-type: none;
+}

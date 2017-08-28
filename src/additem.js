@@ -3,12 +3,11 @@ import './css/additem.css';
 
 class AddItem extends Component {
 
-
   render(){
 
     return(
       <form id="add-todo" onSubmit={this.handleSubmit.bind(this)}>
-        <input type="text" required ref="newItem" />
+        <input type="text"  ref="newItem" required />
         <input type="submit" value="Enter" />
       </form>
     );
@@ -18,6 +17,7 @@ class AddItem extends Component {
   handleSubmit(e){
     e.preventDefault();
     this.props.onAdd(this.refs.newItem.value);
+    this.refs.newItem.value ="";
   }
 }
   export default AddItem;

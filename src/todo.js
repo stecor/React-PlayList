@@ -22,11 +22,13 @@ class Todo extends Component {
       }.bind(this));
 
     return (
-      <div id="todo-list">
-        <p>The busiest people have the most leisure...</p>
-        <ul>{todos}</ul>
-        <AddItem onAdd={this.onAdd}/>
-      </div>
+
+        <div id="todo-list">
+          <p>The busiest people have the most leisure...</p>
+          <ul>{todos}</ul>
+          <AddItem onAdd={this.onAdd}/>
+        </div>
+
     );
   }
 
@@ -46,6 +48,19 @@ class Todo extends Component {
     this.setState({
       todos: updatedTodos
     })
+  }
+
+  //lifecycle functions
+  componentWillMount(){
+    console.log('componentWillMount');
+  }
+
+  componentDidMount(){
+    console.log('componentDidMount');
+  }
+
+  componentWillUpdate(){
+    console.log('componentWillUpdate');
   }
 
 }
