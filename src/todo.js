@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TodoItem from './todoitem';
+import AddItem from './additem';
 import './css/todo.css';
 
 class Todo extends Component {
@@ -7,6 +8,7 @@ class Todo extends Component {
   constructor(props){
     super(props);
     this.onDelete = this.onDelete.bind(this);
+    this.onAdd = this.onAdd.bind(this);
     this.state= {todos:['wash up','eat some cheese', 'take a nap','buy flowers'] }
   }
 
@@ -23,6 +25,7 @@ class Todo extends Component {
       <div id="todo-list">
         <p>The busiest people have the most leisure...</p>
         <ul>{todos}</ul>
+        <AddItem onAdd={this.onAdd}/>
       </div>
     );
   }
@@ -35,6 +38,14 @@ class Todo extends Component {
       this.setState({
         todos: updatedTodos
       });
+  }
+
+  onAdd(item){
+    var updatedTodos = this.state.todos;
+    updatedTodos.push(item);
+    this.setState({
+      todos: updatedTodos
+    })
   }
 
 }
