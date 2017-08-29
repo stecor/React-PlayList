@@ -8,14 +8,14 @@ class Nav extends Component{
 
       <ul className='nav'>
         <li>
-        <NavLink exact activeClassName='active' to='/todo'>
-        Home
-        </NavLink>
+          <NavLink exact activeClassName='active' to='/todo'>
+          Home
+          </NavLink>
         </li>
         <li>
-        <NavLink activeClassName='active' to='/about'>
-        About
-        </NavLink>
+          <NavLink activeClassName='active' to='/about'>
+          About
+          </NavLink>
         </li>
       </ul>
 
